@@ -30,7 +30,7 @@ plotAcadMkspanCusto  <- ggplot(dadosACAD, aes(x=mks, y=cst/1000, color=metodo, s
                         ggtitle("ACAD") +
                         theme(plot.title = element_text(face="bold", hjust=0.98,margin = margin(b = -20)), legend.position="none", plot.margin=grid::unit(c(0.3,0.1,0.1,0.1), "in"))
 
-plotAcadOvtMkspan    <- ggplot(dadosACAD, aes(x=noh, y=mks, color=metodo, shape=metodo)) +
+plotAcadOvtMkspan    <- ggplot(dadosACAD, aes(x=noh*8, y=mks, color=metodo, shape=metodo)) +
                         geom_point() +
                         scale_shape_manual(values=shapes) +
                         scale_color_manual(values=colors) +
@@ -38,7 +38,7 @@ plotAcadOvtMkspan    <- ggplot(dadosACAD, aes(x=noh, y=mks, color=metodo, shape=
                         ggtitle("ACAD") +
                         theme(plot.title = element_text(face="bold", hjust=0.98,margin = margin(b = -20)), legend.position="none", plot.margin=grid::unit(c(0.3,0.1,0.1,0.1), "in"))
 
-plotAcadOvtCusto     <- ggplot(dadosACAD,aes(x=noh, y=cst/1000, color=metodo, shape=metodo)) +
+plotAcadOvtCusto     <- ggplot(dadosACAD,aes(x=noh*8, y=cst/1000, color=metodo, shape=metodo)) +
                         geom_point() +
                         scale_shape_manual(values=shapes) +
                         scale_color_manual(values=colors) +
@@ -54,7 +54,7 @@ plotParmMkspanCusto  <- ggplot(dadosPARM,aes(x=mks,y=cst/1000,color=metodo,shape
                         ggtitle("PARM")+
                         theme(plot.title = element_text(face="bold", hjust=0.98,margin = margin(b = -20)), legend.position="none", plot.margin=grid::unit(c(0.3,0.1,0.1,0.1), "in"))
 
-plotParmOvtMkspan    <- ggplot(dadosPARM,aes(x=noh, y=mks, color=metodo, shape=metodo)) +
+plotParmOvtMkspan    <- ggplot(dadosPARM,aes(x=noh*8, y=mks, color=metodo, shape=metodo)) +
                         geom_point() +
                         scale_shape_manual(values=shapes) +
                         scale_color_manual(values=colors) +
@@ -62,7 +62,7 @@ plotParmOvtMkspan    <- ggplot(dadosPARM,aes(x=noh, y=mks, color=metodo, shape=m
                         ggtitle("PARM")+
                         theme(plot.title = element_text(face="bold", hjust=0.98,margin = margin(b = -20)), legend.position="none", plot.margin=grid::unit(c(0.3,0.1,0.1,0.1), "in"))
 
-plotParmOvtCusto     <- ggplot(dadosPARM,aes(x=noh, y=cst/1000, color=metodo, shape=metodo)) +
+plotParmOvtCusto     <- ggplot(dadosPARM,aes(x=noh*8, y=cst/1000, color=metodo, shape=metodo)) +
                         geom_point() +
                         scale_shape_manual(values=shapes) +
                         scale_color_manual(values=colors) +
